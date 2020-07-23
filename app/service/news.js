@@ -8,6 +8,8 @@ class NewsService extends Service {
     // read config
     const { serverUrl, pageSize } = this.config.news;
 
+    console.log('走到服务');
+
     // use build-in http client to GET hacker-news api
     const { data: idList } = await this.ctx.curl(
       `${serverUrl}/topstories.json`,
@@ -21,7 +23,6 @@ class NewsService extends Service {
       }
     );
 
-    console.log(idList, '====');
 
     // parallel GET detail
     const newsList = await Promise.all(

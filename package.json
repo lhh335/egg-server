@@ -5,12 +5,14 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "egg-bin dev"
+    "dev": "egg-bin dev",
+    "start": "npm run dev"
   },
   "author": "lhh1@meitu.com",
   "license": "ISC",
   "dependencies": {
     "egg": "^2.27.0",
+    "egg-validate": "^2.0.2",
     "egg-view-nunjucks": "^2.2.0",
     "moment": "^2.27.0"
   },
